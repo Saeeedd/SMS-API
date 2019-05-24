@@ -1,0 +1,43 @@
+{% block body %}
+    <div class="container">
+        <div> Num of all Messages : {{ numOfAll }} </div>
+        <div> Num of API 1 usage : {{ apiUsage1 }} </div>
+        <div> Num of API 2 usage : {{ apiUsage2 }} </div>
+
+        <div> API 1 Availability rate : {{ Api1AvailabilityRatio }} </div>
+        <div> API 2 Availability rate : {{ Api2AvailabilityRatio }} </div>
+
+        <table>
+            {% for number in numbers %}
+                <tr>
+                    <td>
+                        number : {{ number.phoneNumber }}
+                    </td>
+                    <td>
+                        count : {{ number.counter }}
+                    </td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+        <table>
+            <tr>
+                <th> id </th>
+                <th> message body </th>
+                <th> phone number </th>
+                <th> sent state </th>
+                <th> api </th>
+            </tr>
+            {% for message in messages %}
+                <tr>
+                    <td>{{ message.id }}</td>
+                    <td>{{ message.messageBody }}</td>
+                    <td>{{ message.phoneNumber }}</td>
+                    <td>{{ message.sentState ? 'sent successfully' : 'not sent yet'}}</td>
+                    <td>{{ message.api}}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}
