@@ -20,7 +20,7 @@ Create and setup MySQL database with
 make sure that your *redis-server* is up.
 Then you can run the server. for example for running server on port 8000 
 		
-	$ php bin/console server:start 8000 && php ResendTask.php
+	$ php bin/console server:start 8000 && php ResendTask.php 8000
 
 
 #### ResendTask.php 
