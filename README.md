@@ -26,3 +26,5 @@ Then you can run the server. for example for running server on port 8000
 #### ResendTask.php 
 This script is for re-sending requests for rejected messages and communicate with main server through *redis-server*
 
+#### Log file
+Log data with generated in `app.log`.
