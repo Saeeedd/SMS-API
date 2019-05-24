@@ -14,13 +14,13 @@ Open **.env** file and replace *ReplaceYourMysqlUser* and *ReplaceYourPassword* 
 
 Create and setup MySQL database with
 
-		$ php bin/console doctrine:database:create
-		$ php bin/console doctrine:migrations:migrate
+	$ php bin/console doctrine:database:create
+	$ php bin/console doctrine:migrations:migrate
 	
 make sure that your *redis-server* is up.
 Then you can run the server. for example for running server on port 8000 
 		
-		$ php bin/console server:start 8000 && php ResendTask.php
+	$ php bin/console server:start 8000 && php ResendTask.php
 
 
 #### ResendTask.php 
